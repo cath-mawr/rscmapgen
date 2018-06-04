@@ -40,9 +40,7 @@ load_chunk(struct chunk *c, unsigned x, unsigned y, unsigned z)
 	FILE *f;
 	char name[128];
 
-	snprintf(name, sizeof(name),
-		"/home/sks/sakaki/rs/game/data2/Map/%u-%u-%u.dat",
-		x, y, z);
+	snprintf(name, sizeof(name), "./Map/%u-%u-%u.dat", x, y, z);
 	f = fopen(name, "rb");
 	if (f == NULL) {
 		if (errno == ENOENT) {
